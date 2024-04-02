@@ -1,0 +1,349 @@
+<style>     
+      @page {
+        font-family: Helvetica;
+        margin: 1cm;
+        @top-right {
+            color: #a9a;
+            content: '{id}';
+            font-size: 9pt;
+          }        
+        @bottom-right {
+          color: #a9a;
+          content: '{id}';
+          font-size: 9pt;
+        }
+      }
+      
+      html {
+        color: #14213d;
+        font-family: Source Sans Pro;
+        font-size: 11pt;
+        line-height: 1.6;
+      }
+      body {
+        margin: 0;
+      }      
+      h1 {
+        color: #000000;
+        font-family: Helvetica;
+        font-size: 9pt;
+        margin: 0;
+        text-align: center;
+        border-top: .2mm solid #a9a;
+        border-bottom: .2mm solid #a9a;        
+        border-left: .2mm solid #a9a;
+        border-right: .2mm solid #a9a;
+
+      }
+      
+      table {
+        border-collapse: collapse;
+        width: 100%;      
+      }
+
+      table thead tr th {
+        font-size: 8pt;
+        border: 1px solid #a9a;
+      }
+      table tfoot tr td {        
+        font-size: 6pt;
+        border: 1px solid #a9a;
+        line-height: 10px;
+      }
+
+      table tbody tr td {
+        font-size: 8pt;
+        border: 1px solid #a9a;
+      }
+
+      table#empty tbody tr td {
+        border: none;
+      }      
+
+    </style>
+<html>
+<body>
+
+
+    <h1>DECLARAÇÃO DE CONTEÚDO</h1>
+    <p style="line-height: 10px;"></p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>REMETENTE</th>
+                <th>DESTINATÁRIO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>NOME: {nome.r}</td>
+                <td>NOME: {nome.d}</td>
+            </tr>
+            <tr>
+                <td>ENDEREÇO: {endereco.r}</td>
+                <td>ENDEREÇO: {endereco.d}</td>
+            </tr>
+            <tr>
+                <td>CIDADE: {cidade.r} / UF: {uf.r}</td>
+                <td>CIDADE: {cidade.d} / UF: {uf.d}</td>
+            </tr>
+            <tr>
+                <td>CEP: {cep.r} / CNPJ/CPF: {cpf.r} </td>
+                <td>CEP: {cep.d} / CNPJ/CPF: {cpf.d} </td>
+            </tr>                        
+        </tbody>
+    
+    </table>    
+    
+    <p style="line-height: 10px;"></p>
+    <h1>IDENTIFICAÇÃO DOS BENS</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 40px;">ITEM</th>
+                <th>CONTEÚDO</th>
+                <th style="width: 40px;">QUANTIDADE</th>
+                <th style="width: 100px;">VALOR</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: center;">{item1_id}</td>
+                <td>{item1_nome}</td>
+                <td style="text-align: center;">{item1_quantidade}</td>
+                <td style="text-align: right">{item1_valor}</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">{item2_id}</td>
+                <td>{item2_nome}</td>
+                <td style="text-align: center;">{item2_quantidade}</td>
+                <td style="text-align: right">{item2_valor}</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">{item3_id}</td>
+                <td>{item3_nome}</td>
+                <td style="text-align: center;">{item3_quantidade}</td>
+                <td style="text-align: right">{item3_valor}</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">{item4_id}</td>
+                <td>{item4_nome}</td>
+                <td style="text-align: center;">{item4_quantidade}</td>
+                <td style="text-align: right">{item4_valor}</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">{item5_id}</td>
+                <td>{item5_nome}</td>
+                <td style="text-align: center;">{item5_quantidade}</td>
+                <td style="text-align: right">{item5_valor}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td style="text-align: right; background-color: lightgray" colspan="2">TOTAIS </td>
+                <td style="text-align: center;">{total_quantidade}</td>
+                <td style="text-align: right;">{total_valor}</td>
+            </tr>
+            <tr>
+                <td style="text-align: right; background-color: lightgray" colspan="2">PESO TOTAL (Kg)</td>
+                <td style="text-align: center;">{total_peso}</td>
+                <td></td>
+            </tr>        
+          </tfoot>
+    </table> 
+    
+    
+    <p style="line-height: 10px;"></p>
+    <h1>DECLARAÇÃO</h1>
+    
+    <table>
+        <tbody>
+            <tr>
+                <td style="font-size: 6pt;">
+                    Declaro que não me enquadro no conceito de contribuinte previsto no art. 4º da Lei Complementar nº 87/1996, uma vez que não realizo, com habitualidade ou em
+                    volume que caracterize intuito comercial, operações de circulação de mercadoria, ainda que se iniciem no exterior, ou estou dispensado da emissão da nota fiscal por força
+                    da legislação tributária vigente, responsabilizando-me, nos termos da lei e a quem de direito, por informações inverídicas. 
+                         Declaro ainda que não estou postando conteúdo inflamável, explosivo, causador de combustão espontânea, tóxico, corrosivo, gás ou qualquer outro conteúdo que
+                    constitua perigo, conforme o art. 13 da Lei Postal nº 6.538/78 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="line-height: 10px;"></p>
+                    <table id="empty">
+                        <tr>
+                            <td style="font-size: 6pt;">{data}</td>
+                            <td>______________________________________________</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td style="font-size: 6pt;">Assinatura do Declarante / Remetente</td>
+                        </tr>
+                    </table>                
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    
+    <p style="line-height: 4pt;"></p>
+    <table>
+        <tbody>
+            <tr>
+                <td style="font-size: 6pt;">
+                    <b>OBSERVAÇÃO</b> <br>
+                    Constitui crime contra a ordem tributária suprimir ou reduzir tributo,ou contribuição social de qualquer acessório (Lei8.137/90 Art1,V). 
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------ -->
+<p style="line-height: 4pt;"></p>
+<hr>
+<p style="line-height: 4pt;"></p>
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+<h1>DECLARAÇÃO DE CONTEÚDO</h1>
+<p style="line-height: 10px;"></p>
+
+<table>
+    <thead>
+        <tr>
+            <th>REMETENTE</th>
+            <th>DESTINATÁRIO</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>NOME: {nome.r}</td>
+            <td>NOME: {nome.d}</td>
+        </tr>
+        <tr>
+            <td>ENDEREÇO: {endereco.r}</td>
+            <td>ENDEREÇO: {endereco.d}</td>
+        </tr>
+        <tr>
+            <td>CIDADE: {cidade.r} / UF: {uf.r}</td>
+            <td>CIDADE: {cidade.d} / UF: {uf.d}</td>
+        </tr>
+        <tr>
+            <td>CEP: {cep.r} / CNPJ/CPF: {cpf.r} </td>
+            <td>CEP: {cep.d} / CNPJ/CPF: {cpf.d} </td>
+        </tr>                        
+    </tbody>
+
+</table>    
+
+<p style="line-height: 10px;"></p>
+<h1>IDENTIFICAÇÃO DOS BENS</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th style="width: 40px;">ITEM</th>
+            <th>CONTEÚDO</th>
+            <th style="width: 40px;">QUANTIDADE</th>
+            <th style="width: 100px;">VALOR</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align: center;">{item1_id}</td>
+            <td>{item1_nome}</td>
+            <td style="text-align: center;">{item1_quantidade}</td>
+            <td style="text-align: right">{item1_valor}</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">{item2_id}</td>
+            <td>{item2_nome}</td>
+            <td style="text-align: center;">{item2_quantidade}</td>
+            <td style="text-align: right">{item2_valor}</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">{item3_id}</td>
+            <td>{item3_nome}</td>
+            <td style="text-align: center;">{item3_quantidade}</td>
+            <td style="text-align: right">{item3_valor}</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">{item4_id}</td>
+            <td>{item4_nome}</td>
+            <td style="text-align: center;">{item4_quantidade}</td>
+            <td style="text-align: right">{item4_valor}</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">{item5_id}</td>
+            <td>{item5_nome}</td>
+            <td style="text-align: center;">{item5_quantidade}</td>
+            <td style="text-align: right">{item5_valor}</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td style="text-align: right; background-color: lightgray" colspan="2">TOTAIS </td>
+            <td style="text-align: center;">{total_quantidade}</td>
+            <td style="text-align: right;">{total_valor}</td>
+        </tr>
+        <tr>
+            <td style="text-align: right; background-color: lightgray" colspan="2">PESO TOTAL (Kg)</td>
+            <td style="text-align: center;">{total_peso}</td>
+            <td></td>
+        </tr>        
+      </tfoot>
+</table> 
+
+
+<p style="line-height: 10px;"></p>
+<h1>DECLARAÇÃO</h1>
+
+<table>
+    <tbody>
+        <tr>
+            <td style="font-size: 6pt;">
+                Declaro que não me enquadro no conceito de contribuinte previsto no art. 4º da Lei Complementar nº 87/1996, uma vez que não realizo, com habitualidade ou em
+                volume que caracterize intuito comercial, operações de circulação de mercadoria, ainda que se iniciem no exterior, ou estou dispensado da emissão da nota fiscal por força
+                da legislação tributária vigente, responsabilizando-me, nos termos da lei e a quem de direito, por informações inverídicas. 
+                     Declaro ainda que não estou postando conteúdo inflamável, explosivo, causador de combustão espontânea, tóxico, corrosivo, gás ou qualquer outro conteúdo que
+                constitua perigo, conforme o art. 13 da Lei Postal nº 6.538/78 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="line-height: 10px;"></p>
+                <table id="empty">
+                    <tr>
+                        <td style="font-size: 6pt;">{data}</td>
+                        <td>______________________________________________</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="font-size: 6pt;">Assinatura do Declarante / Remetente</td>
+                    </tr>
+                </table>                
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<p style="line-height: 4pt;"></p>
+<table>
+    <tbody>
+        <tr>
+            <td style="font-size: 6pt;">
+                <b>OBSERVAÇÃO</b> <br>
+                Constitui crime contra a ordem tributária suprimir ou reduzir tributo,ou contribuição social de qualquer acessório (Lei8.137/90 Art1,V). 
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+</body>
+</html>

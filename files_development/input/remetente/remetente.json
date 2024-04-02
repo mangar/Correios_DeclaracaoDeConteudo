@@ -1,0 +1,8 @@
+{
+    "nome":"Nome do Remetente",
+    "endereco":"Endereço, 123 - Bairro",
+    "cidade":"São Paulo",
+    "uf":"SP",
+    "cep":"04500-000",
+    "cpf":"111.222.333-11"
+}

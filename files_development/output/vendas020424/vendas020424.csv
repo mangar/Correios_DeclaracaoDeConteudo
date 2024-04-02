@@ -1,0 +1,3 @@
+id,data,nome,endereco,cidade,uf,cep,cpf,item1_nome,item1_quantidade,item1_valor,item1_peso,item2_nome,item2_quantidade,item2_valor,item2_peso,item3_nome,item3_quantidade,item3_valor,item3_peso,item4_nome,item4_quantidade,item4_valor,item4_peso,item5_nome,item5_quantidade,item5_valor,item5_peso
+1111_2222_3333_4444,02/04/2024,Nome do Destinatário,"Rua Paraná, 1741 - Alto do Ipiranga",Ribeirão Preto,SP,14055_490,111.222.333-00,Camiseta Preta,1,"R$ 50,00","0,110",Camiseta Branca,1,"R$ 55,00","0,120",Camiseta Azul,1,"R$ 60,00","0,130",,,,,,,,
+1234-1234-1234-1234,02/04/2024,Nome do Destinatário,Endereço do Destino,São Paulo,SP,14055_490,123.321.111-30,Camiseta Preta,2,"R$ 100,00","0,200",Camiseta Branca,5,"R$ 250,00","0,500",,,,,,,,,,,,
